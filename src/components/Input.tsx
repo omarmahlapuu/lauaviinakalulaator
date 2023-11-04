@@ -14,7 +14,8 @@ const Input = (props: { setLoadMusic: Dispatch<SetStateAction<boolean>>; limpa: 
     const moneyNeeded = useMemo(() => {
         const selected = prices.find((f) => f.size === size)?.price;
         if (!selected || !money) return null;
-        return props.limpa ? selected + limpaPrice : selected
+        const limpaAmount = size === 1.0 ? 2 : 1
+        return props.limpa ? selected + limpaPrice * limpaAmount : selected
     }, [limpaPrice, money, prices, props.limpa, size])
 
     const calculateAmount = useMemo(() => {
