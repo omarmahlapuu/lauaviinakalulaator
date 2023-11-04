@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import soundtrack from '../../public/lauaviin.mp3'; // assuming you have a .mp3 module declaration
+import soundtrack from "../assets/lauaviin.mp3"
 
 const AudioPlayer = (props: {loadMusic: boolean}) => {
     const audioRef = useRef<HTMLAudioElement | null>(null);
