@@ -1,0 +1,96 @@
+
+.input-container {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    animation: pulseGlow 1s infinite;
+    border-radius: .3rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.832);
+    
+}
+$input-group-spacing: 10px;
+$label-font-size: 16px;
+$input-padding: 10px;
+$border-radius: 5px;
+$color-primary: #3498db;
+$color-secondary: #2c3e50;
+$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $input-group-spacing;
+  label {
+    text-align: center;
+    font-size: $label-font-size;
+    color: $color-secondary;
+    margin-bottom: $input-group-spacing / 2;
+    font-family: $font-stack;
+  }
+  input[type="number"],
+  select {
+    text-align: center;
+    font-family: $font-stack;
+    padding: $input-padding;
+    border-radius: $border-radius;
+    border: 1px solid $color-secondary;
+    
+    // Remove the default browser spinners
+
+    &::-webkit-inner-spin-button, /* Chrome/Webkit */
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+    &:focus {
+      border-color: $color-primary;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
+    }
+  }
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+// If you want to add a custom arrow to your select
+.select-arrow {
+  position: relative;
+  &::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: $input-padding;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: $color-secondary;
+  }
+}
+
+.result {
+
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+
+@keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f00, 0 0 20px #f00, 0 0 25px #f00, 0 0 30px #f00, 0 0 35px #f00;
+    }
+    50% {
+      box-shadow: 0 0 10px #fff, 0 0 20px #ffeded, 0 0 30px #ffcccc, 0 0 40px #ffcccc, 0 0 50px #ffcccc, 0 0 60px #ffcccc, 0 0 70px #ffcccc;
+    }
+    100% {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f00, 0 0 20px #f00, 0 0 25px #f00, 0 0 30px #f00, 0 0 35px #f00;
+    }
+  }

@@ -1,0 +1,85 @@
+/* Reset some basic elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Remove default margin and padding */
+  body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set up the body and html to fill the height and width */
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a default font family and text color for consistency */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Set default background color */
+  body {
+    background-color: #fff;
+    padding: .9rem;
+
+  }
+  
+  /* Ensure images and other media can't exceed the body width */
+  img,
+  video,
+  canvas,
+  audio,
+  iframe,
+  figure,
+  figcaption {
+    max-width: 100%;
+  }
+  
+  /* List styles reset */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Link styles reset */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Form element resets */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+  }
+  
+  /* Button and link button reset */
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'],
+  a.button {
+    background-color: transparent;
+    background-image: none;
+  }
+  
+  /* Set up a responsive viewport */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+@import "./main.scss";
+@import "./input-styles.scss";

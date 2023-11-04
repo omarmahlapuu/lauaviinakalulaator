@@ -1,0 +1,99 @@
+.background {
+    height: 100%;
+    background: beige;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 3rem;
+    padding: 1rem;
+    background-color: #fff;
+    animation: pulseGlow 1.5s infinite;
+    border-radius: .3rem;
+
+    .grid-item {
+        background-image: url("lauaviin.jpeg");
+        background-size: contain; /* Cover the entire space of the item */
+        background-position: center; /* Center the image within the item */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+
+    }
+
+    /* Random span sizes for the grid items */
+    #item1 {
+        grid-column: span 2;
+        animation: spin 1s linear infinite;
+    }
+    #item2 {
+        grid-row: span 2;
+        animation: spin 3s linear infinite;
+    }
+    #item3 {
+        grid-column: span 1;
+        animation: spin 3s linear infinite;
+
+    }
+    #item4 {
+        grid-row: span 1;
+        animation: spin 3s linear infinite;
+    }
+    #item5 {
+        grid-column: span 3;
+        animation: spin 3s linear infinite;
+    }
+    #item6 {
+        grid-row: span 1;
+        animation: spin .4s linear infinite;
+    }
+    #item7 {
+        grid-column: span 2;
+        animation: spin .5s linear infinite;
+    }
+    #item8 {
+        grid-row: span 2;
+        animation: spin 2s linear infinite;
+    }
+    #item9 {
+        grid-column: span 1;
+        animation: spin 1s linear infinite;
+    }
+    #item10 {
+        grid-row: span 1;
+        animation: spin 5s linear infinite;
+    }
+    #item11 {
+        grid-column: span 2;
+        animation: spin 2s linear infinite;
+    }
+    #item12 {
+        grid-row: span 3;
+        animation: spin 4s linear infinite;
+    }
+    #item13 {
+        grid-column: span 1;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f00, 0 0 20px #f00, 0 0 25px #f00, 0 0 30px #f00, 0 0 35px #f00;
+    }
+    50% {
+      box-shadow: 0 0 10px #fff, 0 0 20px #ffeded, 0 0 30px #ffcccc, 0 0 40px #ffcccc, 0 0 50px #ffcccc, 0 0 60px #ffcccc, 0 0 70px #ffcccc;
+    }
+    100% {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f00, 0 0 20px #f00, 0 0 25px #f00, 0 0 30px #f00, 0 0 35px #f00;
+    }
+  }
