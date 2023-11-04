@@ -9,7 +9,7 @@
     background-color: #fff;
     animation: pulseGlow 1.5s infinite;
     border-radius: .3rem;
-
+    overflow: hidden;
     .grid-item {
         background-image: url("/src/assets/lauaviin.jpeg");
         background-size: contain; /* Cover the entire space of the item */

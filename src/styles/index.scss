@@ -15,6 +15,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
   
   /* Set a default font family and text color for consistency */
@@ -28,7 +29,7 @@
   body {
     background-color: #fff;
     padding: .9rem;
-    overflow: hidden;
+    
   }
   
   /* Ensure images and other media can't exceed the body width */
