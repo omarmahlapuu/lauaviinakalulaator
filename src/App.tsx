@@ -5,11 +5,13 @@ import Container from "./containers/Container";
 
 function App() {
     const [loadMusic, setLoadMusic] = useState(false);
+    const [limpa, setLimpa] = useState(false);
+
     return (
         <>
             <AudioPlayer loadMusic={loadMusic} />
-            <Container />
-            <Input setLoadMusic={setLoadMusic} />
+            <Container limpa={limpa}/>
+            <Input setLoadMusic={setLoadMusic} limpa={limpa} setLimpa={setLimpa}/>
         </>
     );
 }

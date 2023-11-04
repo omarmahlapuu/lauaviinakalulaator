@@ -21,6 +21,7 @@ $color-secondary: #2c3e50;
 $font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 .input-group {
+    opacity: 1;
   display: flex;
   flex-direction: column;
   margin-bottom: $input-group-spacing;
@@ -76,6 +77,17 @@ $font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
 
+.switch-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    label {
+        font-size: 16px;
+
+    }
+}
+
 .result {
 
     text-align: center;
@@ -94,3 +106,22 @@ $font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f00, 0 0 20px #f00, 0 0 25px #f00, 0 0 30px #f00, 0 0 35px #f00;
     }
   }
+
+  @media (max-width: 500px) {
+    .input-container {
+        width: 100%;
+        height: 100svh;
+        padding: 2rem;
+
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        .input-group {
+            width: 100%;
+        }
+        
+    }
+}
